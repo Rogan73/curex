@@ -1,6 +1,10 @@
 export default {
     formatCur(payload:number){
-        return Math.trunc(payload)==0 ? payload.toFixed(7) : payload.toFixed(2);
+        let v= payload.toFixed(7);
+            v = v.replace(/0*$/,"");
+            v = v.indexOf('.')==v.length-2 ? v+'0' : v;
+            v = v.indexOf('.')==v.length-1 ? v+'00' : v;
+        return v;
     },
     
 }

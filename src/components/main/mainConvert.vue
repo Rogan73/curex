@@ -17,6 +17,7 @@
       :value="amountFrom" 
       @input="setAmountFrom($event.target.value)"
       title="Кількість, яку хочемо поміняти"
+      min="1"
       >
 
     </div>

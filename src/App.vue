@@ -1,6 +1,9 @@
 <template>
-  
-    <div class="theme-green app_main">
+    <!-- <div class="theme-green app_main"> -->
+    <div class="app_main"
+    :class=" {vis: vis}"
+    >
+    
     <popupModalComp/>
     <headerComp/>
     <div class="main">
@@ -31,11 +34,17 @@ export default defineComponent({
     listComp,
     footerComp,
   },
+  data: () => ({
+    vis:false
+  }),
   created() {
     store.dispatch('fetchCurrencies');
   },
   mounted(){
+    document.title = 'Конвертер валют';
     this.addListDoc();
+    
+    setTimeout( ()=>{this.vis=true},200);
   },
   methods:{
 
@@ -68,6 +77,8 @@ export default defineComponent({
   background-color: var(--bgMain);
   padding: 10px 10px;
 }
+
+
 </style>
 
 
