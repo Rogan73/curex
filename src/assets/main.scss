@@ -1,0 +1,128 @@
+//@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+:root {
+    --bg1: #f6f7f9;
+    /*#f2f2f2;*/
+    --col1: #2c3e50;
+    --bgTab: rgb(238, 238, 238);
+    --colTab: rgb(128, 128, 128);
+    --bgTabAct: #fff;
+    --colTabAct: #705ae0;
+    --colCur: #705ae0;
+    --bgBut: #705ae0;
+    --colBut: #f6f7f9;
+    --bgCard: #fff;
+    --drHov: rgb(227, 227, 227);
+    --bgDr: #fff;
+    --bgMain: rgb(235, 233, 233);
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--bg1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0px;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#app {
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: var(--col1);
+    margin: 0 auto;
+    max-width: 600px;
+    background-color: var(--colTabAct);
+    border-radius: 20px;
+    padding: 10px 0px;
+    height: 92vh;
+    max-width: 92vh;
+    /*overflow: hidden;*/
+}
+
+header {
+    font-size: 20px;
+    color: var(--bg1);
+    margin-bottom: 10px;
+}
+
+.shad {
+    box-shadow: 0 0 16px 0px #00000038;
+}
+
+.inp {
+    width: 20%;
+    height: 30px;
+    border: 2px solid rgba(0, 0, 0, .1);
+    border-radius: 100px;
+    outline: none;
+    background-color: transparent;
+    padding-left: 25px;
+    padding-right: 25px;
+    transition: all .4s;
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.listOther {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background-color: var(--bgCard);
+    padding: 20px 20px;
+    border: 1px solid lightgray;
+    margin: 5px 0;
+}
+
+.card2 {
+    border-radius: 20px;
+    background-color: var(--bgCard);
+    padding: 10px 5px;
+    border: 1px solid lightgray;
+    margin: 5px 0;
+}
+
+.summa {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--colCur);
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.dflex {
+    display: flex;
+    align-items: center;
+}
+
+.curs {
+    margin-left: 14px;
+}
