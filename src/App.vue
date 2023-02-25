@@ -1,5 +1,6 @@
 <template>
-    <div class="app_main">
+  
+    <div class="theme-green app_main">
     <popupModalComp/>
     <headerComp/>
     <div class="main">
@@ -18,7 +19,6 @@ import headerComp from './components/headerComp.vue';
 import mainComp from './components/main/mainComp.vue';
 import listComp from './components/listComp.vue';
 import footerComp from './components/footerComp.vue';
-//import { mapActions } from 'vuex'
 import  store from './store'
 
 
@@ -33,6 +33,28 @@ export default defineComponent({
   },
   created() {
     store.dispatch('fetchCurrencies');
+  },
+  mounted(){
+    this.addListDoc();
+  },
+  methods:{
+
+    addListDoc(){
+      document.addEventListener("click", (elm) => {
+      const el=(elm.target as HTMLElement);
+
+        if (!el.hasAttribute('eldrop')){
+           const arr_dr  = document.querySelectorAll('.dropdown');
+           arr_dr.forEach( e => {
+              if (!e.classList.contains('hidden') ){   
+                   e.classList.add('hidden');
+              }
+           });
+        }
+        });
+    },
+
+
   }  
 
 
@@ -47,3 +69,5 @@ export default defineComponent({
   padding: 10px 10px;
 }
 </style>
+
+

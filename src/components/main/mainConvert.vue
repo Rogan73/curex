@@ -4,6 +4,7 @@
     <div class="card  ">
       
       <dropdown  
+      id="dr01"
       :value="curFrom" 
       :itemlist="currencies"  
       @selected="setCurFrom" 
@@ -36,6 +37,7 @@
       <div class="dflex2">
         
         <dropdown  
+        id="dr02"
         class="mr-10"
         :value="curTo" 
         :itemlist="currencies"  
@@ -111,16 +113,6 @@ export default {
   fill: var(--bgBut)
  }
 
- .dflex2{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
- }
 
- /*
- .curs {
-    padding-top: 5px;
-}
-*/
 </style>
 

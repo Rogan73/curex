@@ -1,19 +1,27 @@
 <template>
-  <div class="selCur" @click="toogleItems"  eldrop>
-        <span eldrop >{{value}}</span>
+  <!-- @click="toogleItems"  -->
+  <div class="selCur"  eldrop :id="id">
+        <div class="dflex">
+           <img class="icnC" :src="'/curex/assets/icons/'+value+'.png'" :alt="value">
+           <span eldrop >{{value}}</span>
+        </div>  
         <downIcon2/>
     <div 
-    class="dropdown" 
-    :class="{hidden: !isOpen}"
+    class="dropdown hidden" 
+    :id="id+'w'"
     >
+    <!-- :class="{hidden: !isOpen}" -->
+
     <span
     class="item"
     v-for="item, i in itemlist"
     :key="i"
     @click="$emit('selected',item)"
-    >
-   
-    {{ item }}
+    >  
+      <div class="dflex2">
+      <img class="icnC" :src="'/curex/assets/icons/'+item+'.png'" :alt="item">
+        <span> {{ item }} </span>
+       </div>
     </span>
 
     </div>
@@ -31,18 +39,41 @@ export default {
   },
   props: {
     value: String,
-    itemlist: Array
+    itemlist: Array,
+    id:String
   },
   data: ()=>({
     isOpen:false
   }),
+  mounted(){
+    this.addEvListener();
+    
+  },
   methods:{
     toogleItems(){
        this.isOpen=!this.isOpen;
+    },
+
+    addEvListener(){
+      const dropdown = document.querySelector('#'+this.id);
+      const dropdownWindow = document.querySelector('#'+this.id+'w')
+
+          dropdown?.addEventListener('click', () => {
+            dropdownWindow.classList.toggle('hidden');
+          });
+
+
     }
+    
+
   }
 
 }
+
+
+
+
+
 
 </script>
 
@@ -82,6 +113,7 @@ export default {
      cursor: pointer;
      width: 80px;
      transition: all 0.3s ease;
+     display: flex;
     &:hover{
     background-color: var(--bgBut);
     color: var(--colBut);
@@ -91,6 +123,13 @@ export default {
 .icn{
     width: 20px;
     margin-left: 5px;
+}
+
+
+
+.icnC{
+  width: 20px;
+  padding: 0 4px;
 }
 
 </style>

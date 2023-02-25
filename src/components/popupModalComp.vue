@@ -24,7 +24,10 @@
          class="item"
          @click="AddlistOther(item)"
          >
-         {{ item }}
+           <div class="dflex3">
+            <img class="icnC" :src="'/curex/assets/icons/'+item+'.png'" :alt="item">
+            <span> {{ item }}</span>
+           </div> 
          </div>
         
         </div>
@@ -144,10 +147,16 @@ export default {
     box-shadow: 0 0 10px 0 #0000002a;
     margin: 5px 0;
     transition: all 0.3s ease;
+    display: block;
     &:hover{
         background-color: var(--bgBut);
         color: var(--colBut);
     }
+}
+
+.icnC{
+  width: 20px;
+  padding: 0 4px;
 }
 
 </style>

@@ -4,7 +4,12 @@
        <div class="row_r">
            <div class="pan1">
               <span>Базова валюта</span> 
-              <dropdown class="ml-10" :value="curBase" :itemlist="listBase"  @selected="setCurBase" />
+              <dropdown 
+              id="dr03"
+              class="ml-10" 
+              :value="curBase" 
+              :itemlist="listBase"  
+              @selected="setCurBase" />
            </div>
            <div class="add_btn" @click="openDialog" title="Додати валюту">+</div>
 
@@ -16,8 +21,10 @@
           v-for="item,i in listOther"
           :key="i"
           >
-            
-               <span>{{ item.title }} </span> 
+              <div class="dflex3">
+                  <img class="icnC" :src="'/curex/assets/icons/'+item.title+'.png'" :alt="item.title">   
+                  <span>{{ item.title }} </span>
+              </div>  
             
             <div class="vb" >
                  <span>{{ item.value }} </span>
@@ -70,7 +77,7 @@ export default {
     align-items: center;
     justify-content: space-between;
     width: -webkit-fill-available;
-    max-width: 60%;
+    max-width: 70%;
     padding: 10px 30px;
     border-radius: 50px;
     transition: all 0.3s ease;
