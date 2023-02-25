@@ -12,7 +12,7 @@ Example currency converter
 
 ## Screenshots
 ![For desktop](public/screenshots/curex.png)  
-![Formobile](public/screenshot/curex_green.png)  
+![For desktop](public/screenshot/curex_green.png)  
 
 
 ## Project Setup 🚀
