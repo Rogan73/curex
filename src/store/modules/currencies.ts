@@ -22,6 +22,7 @@ interface Currencyes {
     timeUpdate: number,
     maxTimeUpdate:number,
     timerUpdate: any,
+    TimeLastUpdate: string
 }
 
 
@@ -42,9 +43,15 @@ export default {
         timeUpdate: 0,
         maxTimeUpdate: 5,
         timerUpdate: null,
+        TimeLastUpdate: ''
     },
 
     getters: {
+
+        TimeLastUpdate(state: Currencyes):string{
+            return state.TimeLastUpdate;
+        }, 
+
         timeUpdate(state: Currencyes):number{
             return state.timeUpdate;
         },
@@ -125,6 +132,11 @@ export default {
     },
 
     mutations: {
+
+        setTimeLastUpdate(state: Currencyes) {
+            state.TimeLastUpdate =  new Date().toLocaleString();
+        },
+
         setCurrencies(state: Currencyes, data: Array<string>) {
             state.currencies = data
         },
@@ -205,6 +217,12 @@ export default {
             },1000);  
          },
 
+         swapCurr(state: Currencyes){
+            const v:string = state.curTo;
+            state.curTo = state.curFrom;
+            state.curFrom = v;
+         }
+
 
     },
 
@@ -233,6 +251,7 @@ export default {
                context.dispatch('LoadCurses',context);
 
                context.commit('StatrtTimeUpdate');
+               context.commit('setTimeLastUpdate');
                
                } catch (error) {
                     console.log('error', error)

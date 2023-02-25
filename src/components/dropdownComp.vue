@@ -1,8 +1,7 @@
 <template>
   <div class="selCur" @click="toogleItems"  eldrop>
         <span eldrop >{{value}}</span>
-        <svg eldrop class="icn" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-   
+        <downIcon2/>
     <div 
     class="dropdown" 
     :class="{hidden: !isOpen}"
@@ -24,9 +23,12 @@
 </template>
 
 <script >
-
+import downIcon2 from './icons/downIcon2.vue';
 
 export default {
+  components:{
+    downIcon2
+  },
   props: {
     value: String,
     itemlist: Array
@@ -50,12 +52,14 @@ export default {
     color: var(--colCur);
     cursor: pointer;
     padding: 5px 10px;
-    border: 1px solid rgb(226, 226, 226);
+    /*border: 1px solid rgb(226, 226, 226);*/
+    border: 2px solid rgba(0, 0, 0, .1);
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
     width: 80px;
     position: relative;
+    margin-bottom: 5px;
     
 }
 
@@ -71,6 +75,7 @@ export default {
     left: 0;
     z-index: 100;
     background-color: var(--bgDr);
+   
 }
 .item{
      padding: 8px 5px;

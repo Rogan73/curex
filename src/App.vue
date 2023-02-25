@@ -1,11 +1,13 @@
 <template>
+    <div class="app_main">
     <popupModalComp/>
     <headerComp/>
     <div class="main">
       <mainComp/>
       <listComp/>
      </div>
-    <keyboardComp/>
+    <footerComp/>
+  </div>
 
 </template>
 
@@ -15,7 +17,7 @@ import popupModalComp from './components/popupModalComp.vue';
 import headerComp from './components/headerComp.vue';
 import mainComp from './components/main/mainComp.vue';
 import listComp from './components/listComp.vue';
-import keyboardComp from './components/keyboardComp.vue';
+import footerComp from './components/footerComp.vue';
 //import { mapActions } from 'vuex'
 import  store from './store'
 
@@ -27,7 +29,7 @@ export default defineComponent({
     headerComp,
     mainComp,
     listComp,
-    keyboardComp,
+    footerComp,
   },
   created() {
     store.dispatch('fetchCurrencies');

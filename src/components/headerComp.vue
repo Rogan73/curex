@@ -30,14 +30,15 @@ export default {
 <style scoped lang="scss">
 .updIcn{
   width: 24px;
-  opacity: 0.7
+  margin-top: 4px;
+  fill: var(--bgBut)
 }
 
 .btn_update{
     position: absolute;
     right: 16px;
     top: -4px;
-    padding: 2px 5px;
+    padding: 0px 5px 0px 5px;
     border-radius: 50%;
     background-color: var(--colBut);
     color: var(--bgBut);
@@ -54,5 +55,6 @@ export default {
 }
 .rel{
     position: relative;
+    color: var(--colBut);
 }
 </style>

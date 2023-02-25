@@ -78,12 +78,12 @@ export default {
 
 .sidebar{
     position: unset;
-    top: 0;
+    top: 2vh;
     /*bottom: 0;*/
-    background-color: var(--bgTab);
+    background-color: var(--bgMain);
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
-    height: 100vh;
+    height: 96vh;
     width: 80vw;
     right: -105%;
     opacity: 0;
@@ -121,8 +121,8 @@ export default {
 }
 
 .cls{
-    color: var(--bgTabAct);
     opacity: 0.65;
+    fill: var(--colBut);
 }
 
 .title{

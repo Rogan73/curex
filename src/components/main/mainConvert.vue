@@ -21,7 +21,11 @@
     </div>
 
     <div class="wr" >
-       <div class="btn_change" title="Поміняти валюти місцями"> 
+       <div 
+       class="btn_change" 
+       title="Поміняти валюти місцями"
+       @click="swapCurr"
+       > 
           <swapIcon class="sw"/> 
         </div>
     </div>
@@ -29,16 +33,17 @@
     <!-- TO -->
     <div class="card">
       
-      <div class="dflex">
+      <div class="dflex2">
         
         <dropdown  
+        class="mr-10"
         :value="curTo" 
         :itemlist="currencies"  
         @selected="setCurTo" 
         title="Валюта, на яку міняємо" 
         />
 
-        <span class="curs" title="Курс валюти">{{cursTo}}</span>
+        <span  title="Курс валюти">{{cursTo}}</span>
 
       </div>
       <span class="summa" title="Вартість"> {{amountTo}}</span>
@@ -72,7 +77,7 @@ export default {
 
     },
     methods :{
-      ...mapMutations(['setAmountFrom','setCurFrom','setCurTo'])
+      ...mapMutations(['setAmountFrom','setCurFrom','setCurTo','swapCurr'])
     }
 
 
@@ -103,9 +108,19 @@ export default {
  }
 
  .sw{
-  opacity: 0.5;
+  fill: var(--bgBut)
  }
 
+ .dflex2{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+ }
 
+ /*
+ .curs {
+    padding-top: 5px;
+}
+*/
 </style>
 

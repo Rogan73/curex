@@ -1,13 +1,14 @@
 //@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 :root {
-    --bg1: #f6f7f9;
+    --bg1: #d5d5d5;
     /*#f2f2f2;*/
     --col1: #2c3e50;
     --bgTab: rgb(238, 238, 238);
     --colTab: rgb(128, 128, 128);
     --bgTabAct: #fff;
     --colTabAct: #705ae0;
+    /* #705ae0; */
     --colCur: #705ae0;
     --bgBut: #705ae0;
     --colBut: #f6f7f9;
@@ -15,6 +16,17 @@
     --drHov: rgb(227, 227, 227);
     --bgDr: #fff;
     --bgMain: rgb(235, 233, 233);
+    --color-primary: #705ae0;
+    --color-secondary: #6a289f;
+}
+
+.theme-green {
+    --bg1: #d5d5d5;
+    --colTabAct: #4caf50;
+    --colCur: #4caf50;
+    --bgBut: #4caf50;
+    --color-primary: #4caf50;
+    --color-secondary: #328235;
 }
 
 html {
@@ -22,16 +34,26 @@ html {
 }
 
 body {
-    background-color: var(--bg1);
+    background-color: var(--bg1); // #673ab7
     position: fixed;
     left: 0;
     top: 0;
     right: 0px;
     bottom: 0;
     overflow: hidden;
+    padding: 0;
+    margin: 0;
+    /*background-image: linear-gradient(45deg, var(--color-primary-bm), var(--color-secondary-bm));*/
 }
 
 #app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.app_main {
     font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -42,9 +64,12 @@ body {
     background-color: var(--colTabAct);
     border-radius: 20px;
     padding: 10px 0px;
-    height: 92vh;
-    max-width: 92vh;
-    /*overflow: hidden;*/
+    height: 80vh;
+    max-height: 520px;
+    width: 92vh;
+    max-width: 92vw;
+    box-shadow: 0 0 16px 0px #00000038;
+    background-image: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
 }
 
 header {
@@ -121,8 +146,4 @@ header {
 .dflex {
     display: flex;
     align-items: center;
-}
-
-.curs {
-    margin-left: 14px;
 }

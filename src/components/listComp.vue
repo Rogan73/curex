@@ -16,16 +16,18 @@
           v-for="item,i in listOther"
           :key="i"
           >
+            
+               <span>{{ item.title }} </span> 
+            
             <div class="vb" >
-                <trashIcon 
+                 <span>{{ item.value }} </span>
+                 <trashIcon 
                  class="tr" 
                  @click="DellistOther(item.title)" 
                  title="Видалити"
                  />
-               <span>{{ item.title }} </span> 
-            </div>
-            <span>{{ item.value }} </span>
-          
+             </div>
+
           </div>
        </div>
 
@@ -68,8 +70,8 @@ export default {
     align-items: center;
     justify-content: space-between;
     width: -webkit-fill-available;
-    max-width: 50%;
-    padding: 10px 20px;
+    max-width: 60%;
+    padding: 10px 30px;
     border-radius: 50px;
     transition: all 0.3s ease;
     &:hover{
@@ -83,7 +85,11 @@ export default {
 .tr{
   width: 15px;
   opacity: 0.5;
-  padding-right: 8px;
+  margin-left: 20px;
+  border-radius: 50%;
+  &:hover{
+    fill: var(--colBut);
+  }
 }
 .vb{
   display: flex;
