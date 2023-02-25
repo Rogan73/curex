@@ -1,24 +1,34 @@
-# curex
 
-## Project setup
-```
+# CurEx - Currency Converter 📝  
+
+Example currency converter
+
+### Libraries
+
+- Vue 3 Options API
+- Vue CLI 5
+- Vuex 4
+
+
+## Screenshots
+![For desktop](public/screenshots/curex.png)  
+![Formobile](public/screenshot/curex_green.png)  
+
+
+## Project Setup 🚀
+
+```sh
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
+### Compile and Hot-Reload for Development
+
+```sh
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
+### Compile and Minify for Production
+
+```sh
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
