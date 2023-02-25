@@ -11,9 +11,7 @@ Example currency converter
 
 
 ## Screenshots
-![For desktop](public/screenshots/curex.png) (public/screenshot/curex_green.png)  
-
-
+![App Screenshot](public/screenshots/curex.png) ![App Screenshot](public/screenshot/curex_green.png)  
 
 ## Project Setup 🚀
 
