@@ -84,29 +84,30 @@ export default {
     cursor: pointer;
     padding: 5px 10px;
     /*border: 1px solid rgb(226, 226, 226);*/
-    border: 2px solid rgba(0, 0, 0, .1);
-    border-radius: 10px;
+    border: var(--bor2); /* 2px solid rgba(0, 0, 0, .1);*/
+    border-radius: var(--bordRad10);
     display: flex;
     justify-content: space-between;
     width: 80px;
     position: relative;
-    margin-bottom: 5px;
+    /*margin-bottom: 5px;*/
+    background-color: var(--brDrSel);
     
 }
 
 .dropdown{
     display: flex;
     flex-direction: column;
-    border: 1px solid rgb(239, 239, 239);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border: var(--bor2); /*1px solid rgb(239, 239, 239);*/
+    border-bottom-left-radius: var(--bordRad10);
+    border-bottom-right-radius: var(--bordRad10);
     box-shadow: 0 0 20px 0px #00000038;
     position: absolute;
     top: 30px;
     left: 0;
     z-index: 100;
     background-color: var(--bgDr);
-   
+    border-top: unset;
 }
 .item{
      padding: 8px 5px;
@@ -115,8 +116,8 @@ export default {
      transition: all 0.3s ease;
      display: flex;
     &:hover{
-    background-color: var(--bgBut);
-    color: var(--colBut);
+    background-color: var(--drHov);
+    color: var(--colButH);
    }
 }
 

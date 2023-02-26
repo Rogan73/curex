@@ -3,7 +3,7 @@
        
        <div class="row_r">
            <div class="pan1">
-              <span>Базова валюта</span> 
+              <span class="tbv">Базова валюта</span> 
               <dropdown 
               id="dr03"
               class="ml-10" 
@@ -79,11 +79,12 @@ export default {
     width: -webkit-fill-available;
     max-width: 70%;
     padding: 10px 30px;
-    border-radius: 50px;
+    border-radius: var(--bordRad50);
     transition: all 0.3s ease;
+    color: var(--colItem);
     &:hover{
-        background-color: var(--bgBut);
-        color: var(--colBut);
+        background-color: var(--bgButH);
+        color: var(--colButH);
        
     }    
 
@@ -93,7 +94,7 @@ export default {
   width: 15px;
   opacity: 0.5;
   margin-left: 20px;
-  border-radius: 50%;
+  border-radius: var(--bordRad50p);
   &:hover{
     fill: var(--colBut);
   }
@@ -116,7 +117,8 @@ export default {
     justify-content: space-between;
     background-color: var(--bgTab);
     margin: 4px;
-    border-radius: 20px;
+    border-radius: var(--bordRad20);
+    background-image: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
 }
 
 
@@ -124,7 +126,7 @@ export default {
     background-color: var(--bgBut);
     color: var(--colBut);
     padding: 2px 10px;
-    border-radius: 50%;
+    border-radius: var(--bordRad50p);
     font-size: 25px;
     font-weight: bold;
     cursor: pointer;
@@ -133,5 +135,9 @@ export default {
     &:hover{
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.285);
     }
+}
+
+.tbv{
+  color: var(--colBut);
 }
 </style>

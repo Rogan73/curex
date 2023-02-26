@@ -12,7 +12,7 @@
 
         <div class="title">Додати валюту</div>
         <div class="search">
-          <span class="mr-10">Пошук</span>
+          <span class="mr-10 stxt">Пошук</span>
           <input class="inp summa upper" type="text" :value="listOtherAllFF" @input="setlistOtherAllFF($event.target.value)">
         </div>
 
@@ -83,9 +83,9 @@ export default {
     position: unset;
     top: 2vh;
     /*bottom: 0;*/
-    background-color: var(--bgMain);
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
+    background-color: var(--bgSb);
+    border-top-left-radius: var(--bordRad30);
+    border-bottom-left-radius: var(--bordRad30);
     height: 96vh;
     width: 80vw;
     right: -105%;
@@ -115,7 +115,7 @@ export default {
    color: var(--colBut);
    width: 20px;
    padding: 8px 8px 5px 8px;
-   border-radius: 50%;
+   border-radius: var(--bordRad50p);
    cursor: pointer;
    transition: all 0.3s ease;
    &:hover{
@@ -131,7 +131,12 @@ export default {
 .title{
     width: 100%;
     margin-top: 20px;
-    font-weight: bold;
+    /*font-weight: bold;*/
+    color: var(--colButSb);
+}
+
+.stxt{
+    color: var(--colButSb);
 }
 
 .listItems{
@@ -143,14 +148,16 @@ export default {
     width: -webkit-fill-available;
     max-width: 50%;
     padding: 10px 20px;
-    border-radius: 50px;
+    border-radius: var(--bordRad50);
     box-shadow: 0 0 10px 0 #0000002a;
     margin: 5px 0;
     transition: all 0.3s ease;
     display: block;
+    color: var(--colButSb);
+    background-color: var(--bgButSb);
     &:hover{
-        background-color: var(--bgBut);
-        color: var(--colBut);
+        background-color: var(--bgButH);
+        color: var(--colButH);
     }
 }
 

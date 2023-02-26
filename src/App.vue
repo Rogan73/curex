@@ -1,6 +1,7 @@
 <template>
     <!-- <div class="theme-green app_main"> -->
-    <div class="app_main"
+    <!-- <div class="theme-dark app_main"> -->
+    <div class=" app_main"
     :class=" {vis: vis}"
     >
     

@@ -39,17 +39,17 @@ export default {
     right: 16px;
     top: -4px;
     padding: 0px 5px 0px 5px;
-    border-radius: 50%;
-    background-color: var(--colBut);
+    border-radius: var(--bordRad50p);
+    background-color: var(--bgButInv);
     color: var(--bgBut);
     transition: all 0.3s ease;
     
     cursor: pointer;
     &:hover{
-        background-color: var(--drHov);
-        color: var(--colBut);
+        background-color: var(--colBut);
+       /* color: var(--colBut);*/
         
-        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.285);
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.285);
     }
     
 }

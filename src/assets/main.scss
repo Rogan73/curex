@@ -11,13 +11,32 @@
     /* #705ae0; */
     --colCur: #705ae0;
     --bgBut: #705ae0;
+    --colButCh: #705ae0;
+    --bgButH: #705ae0;
+    --colButSb: unset;
+    --bgButSb: unset;
+    --bgButInv: #d4d4d4;
+    --bgButCh: #f9f9f9;
     --colBut: #f6f7f9;
+    --colButH: #f6f7f9;
+    --colButH2: #705ae0;
+    --colItem: #2e2e2e;
     --bgCard: #fff;
-    --drHov: rgb(227, 227, 227);
+    --drHov: #705ae0;
     --bgDr: #fff;
     --bgMain: rgb(235, 233, 233);
+    --bgSb: rgb(235, 233, 233);
     --color-primary: #705ae0;
     --color-secondary: #6a289f;
+    --bordCard: lightgray;
+    --bordRad20: 20px;
+    --bordRad10: 10px;
+    --bordRad30: 30px;
+    --bordRad50: 50px;
+    --bordRad50p: 50%;
+    --bor2: 2px solid rgba(0, 0, 0, .1);
+    --bor1: 1px solid rgb(239, 239, 239);
+    --brDrSel: #f6f7f9;
 }
 
 .theme-green {
@@ -27,6 +46,38 @@
     --bgBut: #4caf50;
     --color-primary: #4caf50;
     --color-secondary: #328235;
+}
+
+.theme-dark {
+    --bg1: #2e364b;
+    --col1: #2c3e50;
+    --bgTab: #2e364d;
+    --colTab: rgb(128, 128, 128);
+    --bgTabAct: #151c2e;
+    --colTabAct: #495771;
+    --colCur: #e8ebfa;
+    --bgBut: #46526c;
+    --colButCh: #8c96ac;
+    --colBut: #c7d5ef;
+    --colButSb: #c7d5ef;
+    --bgButInv: #92a2c3;
+    --bgButCh: #434e6a;
+    --bgButSb: #47506e;
+    --bgButH: #39445e;
+    --colButH: #ffac31;
+    --colButH2: #ffac31;
+    --colItem: #c7d5ef;
+    --bgCard: #495771;
+    --drHov: rgb(88 101 133);
+    --bgDr: #434f6a;
+    --bgMain: transparent;
+    --bgSb: #2e364d;
+    --color-primary: #6a789a;
+    --color-secondary: #313b54;
+    --bordCard: transparent;
+    --bor2: 2px solid rgb(231 231 231 / 16%);
+    --bor1: 1px solid rgb(98 110 132);
+    --brDrSel: transparent;
 }
 
 html {
@@ -44,6 +95,7 @@ body {
     padding: 0 4%;
     margin: 0;
     /*background-image: linear-gradient(45deg, var(--color-primary-bm), var(--color-secondary-bm));*/
+    @extend .theme-dark;
 }
 
 #app {
@@ -93,7 +145,8 @@ header {
 .inp {
     width: 20%;
     height: 30px;
-    border: 2px solid rgba(0, 0, 0, .1);
+    border: var(--bor2);
+    /* 2px solid rgba(0, 0, 0, .1);*/
     border-radius: 100px;
     outline: none;
     background-color: transparent;
@@ -118,18 +171,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 20px;
+    border-radius: var(--bordRad20);
     background-color: var(--bgCard);
     padding: 20px 20px;
-    border: 1px solid lightgray;
+    border: 1px solid var(--bordCard);
     margin: 5px 0;
 }
 
 .card2 {
-    border-radius: 20px;
+    border-radius: var(--bordRad20);
     background-color: var(--bgCard);
     padding: 10px 5px;
-    border: 1px solid lightgray;
+    border: 1px solid var(--bordCard);
     margin: 5px 0;
     transition: all 1s ease;
 }
@@ -137,7 +190,7 @@ header {
 .summa {
     font-size: 20px;
     font-weight: bold;
-    color: var(--colCur);
+    color: var(--colButH2);
 }
 
 .mr-10 {

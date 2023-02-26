@@ -39,7 +39,7 @@ export default {
    display: flex;
    justify-content: space-around;
    background-color: lightgray;
-   border-radius: 20px;
+   border-radius: var(--bordRad20);
    
  }
 
@@ -47,7 +47,7 @@ export default {
     padding: 5px;
     background-color: var(--bgTab) ;
     margin: 4px;
-    border-radius: 20px;
+    border-radius: var(--bordRad20);
     cursor: pointer;
     font-weight: bold;
     width: -webkit-fill-available;

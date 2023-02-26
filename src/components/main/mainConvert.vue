@@ -46,7 +46,7 @@
         title="Валюта, на яку міняємо" 
         />
 
-        <span  title="Курс валюти">{{cursTo}}</span>
+        <span class="tcurs"  title="Курс валюти">{{cursTo}}</span>
 
       </div>
       <span class="summa" title="Вартість"> {{amountTo}}</span>
@@ -98,22 +98,28 @@ export default {
    left: 45%;
    top: -24px;
    width: 30px;
-   background-color: var(--bgMain);
-   border-radius: 50%;
+   background-color: var(--bgButCh);
+   border-radius: var(--bordRad50p);
    border: 1px solid rgba(0, 0, 0, 0.1);
    padding: 5px 7px 2px 7px;
    cursor: pointer;
    transition: all 0.3s ease;
    &:hover{
-     background-color: var(--colBut);
+     /*background-color: var(--colBut);*/
      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.285);
    }
  }
 
  .sw{
-  fill: var(--bgBut)
+  fill: var(--colButCh);
+   /*&:hover{
+    fill: var(--colBut);
+   }*/
  }
 
+ .tcurs{
+  color: var(--colButH2);
+ }
 
 </style>
 
