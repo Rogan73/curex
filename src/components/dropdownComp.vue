@@ -118,7 +118,12 @@ export default {
     &:hover{
     background-color: var(--drHov);
     color: var(--colButH);
-   }
+      &:last-of-type{
+        border-bottom-left-radius: var(--bordRad10);
+        border-bottom-right-radius: var(--bordRad10);
+      }
+    }
+
 }
 
 .icn{

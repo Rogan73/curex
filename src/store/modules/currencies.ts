@@ -235,6 +235,7 @@ export default {
             context.commit('LoadCurTo'); 
             context.commit('LoadlistOther'); 
             context.commit('LoadCurBase'); 
+            context.commit('LoadTheme');
         },        
 
         async fetchCurrencies(context: any) {

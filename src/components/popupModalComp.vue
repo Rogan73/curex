@@ -24,7 +24,7 @@
          class="item"
          @click="AddlistOther(item)"
          >
-           <div class="dflex3">
+           <div class="dflex3" v-if="item">
             <img class="icnC" :src="'/curex/assets/icons/'+item+'.png'" :alt="item">
             <span> {{ item }}</span>
            </div> 

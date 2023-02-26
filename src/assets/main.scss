@@ -1,5 +1,7 @@
 //@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import './dark.scss';
+@import './green.scss';
 :root {
     --bg1: #d5d5d5;
     /*#f2f2f2;*/
@@ -37,47 +39,8 @@
     --bor2: 2px solid rgba(0, 0, 0, .1);
     --bor1: 1px solid rgb(239, 239, 239);
     --brDrSel: #f6f7f9;
-}
-
-.theme-green {
-    --bg1: #d5d5d5;
-    --colTabAct: #4caf50;
-    --colCur: #4caf50;
-    --bgBut: #4caf50;
-    --color-primary: #4caf50;
-    --color-secondary: #328235;
-}
-
-.theme-dark {
-    --bg1: #2e364b;
-    --col1: #2c3e50;
-    --bgTab: #2e364d;
-    --colTab: rgb(128, 128, 128);
-    --bgTabAct: #151c2e;
-    --colTabAct: #495771;
-    --colCur: #e8ebfa;
-    --bgBut: #46526c;
-    --colButCh: #8c96ac;
-    --colBut: #c7d5ef;
-    --colButSb: #c7d5ef;
-    --bgButInv: #92a2c3;
-    --bgButCh: #434e6a;
-    --bgButSb: #47506e;
-    --bgButH: #39445e;
-    --colButH: #ffac31;
-    --colButH2: #ffac31;
-    --colItem: #c7d5ef;
-    --bgCard: #495771;
-    --drHov: rgb(88 101 133);
-    --bgDr: #434f6a;
-    --bgMain: transparent;
-    --bgSb: #2e364d;
-    --color-primary: #6a789a;
-    --color-secondary: #313b54;
-    --bordCard: transparent;
-    --bor2: 2px solid rgb(231 231 231 / 16%);
-    --bor1: 1px solid rgb(98 110 132);
-    --brDrSel: transparent;
+    --gradient: unset;
+    --colBasV: #705ae0;
 }
 
 html {
@@ -95,7 +58,7 @@ body {
     padding: 0 4%;
     margin: 0;
     /*background-image: linear-gradient(45deg, var(--color-primary-bm), var(--color-secondary-bm));*/
-    @extend .theme-dark;
+    /*@extend .theme-dark;*/
 }
 
 #app {

@@ -21,18 +21,16 @@
           v-for="item,i in listOther"
           :key="i"
           >
-              <div class="dflex3">
+              <div class="dflex3" v-if="item.title">
                   <img class="icnC" :src="'/curex/assets/icons/'+item.title+'.png'" :alt="item.title">   
                   <span>{{ item.title }} </span>
               </div>  
             
             <div class="vb" >
                  <span>{{ item.value }} </span>
-                 <trashIcon 
-                 class="tr" 
-                 @click="DellistOther(item.title)" 
-                 title="Видалити"
-                 />
+                 <div  @click="DellistOther(item.title)" title="Видалити" >
+                    <trashIcon class="tr" />
+                </div>
              </div>
 
           </div>
@@ -118,7 +116,7 @@ export default {
     background-color: var(--bgTab);
     margin: 4px;
     border-radius: var(--bordRad20);
-    background-image: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    background-image: var(--gradient); /*  linear-gradient(45deg, var(--color-primary), var(--color-secondary));  */
 }
 
 
@@ -138,6 +136,6 @@ export default {
 }
 
 .tbv{
-  color: var(--colBut);
+  color: var(--colBasV);
 }
 </style>

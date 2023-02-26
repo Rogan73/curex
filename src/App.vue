@@ -1,7 +1,5 @@
 <template>
-    <!-- <div class="theme-green app_main"> -->
-    <!-- <div class="theme-dark app_main"> -->
-    <div class=" app_main"
+    <div class="app_main"
     :class=" {vis: vis}"
     >
     
@@ -40,12 +38,12 @@ export default defineComponent({
   }),
   created() {
     store.dispatch('fetchCurrencies');
+    
   },
   mounted(){
     document.title = 'Конвертер валют';
     this.addListDoc();
-    
-    setTimeout( ()=>{this.vis=true},200);
+    setTimeout( ()=>{this.vis=true},300);
   },
   methods:{
 
