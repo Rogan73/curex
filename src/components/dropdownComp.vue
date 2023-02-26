@@ -38,9 +38,9 @@ export default {
     downIcon2
   },
   props: {
-    value: String,
-    itemlist: Array,
-    id:String
+    value: String ,
+    itemlist: Array ,
+    id:String  
   },
   data: ()=>({
     isOpen:false
@@ -55,11 +55,12 @@ export default {
     },
 
     addEvListener(){
-      const dropdown = document.querySelector('#'+this.id);
-      const dropdownWindow = document.querySelector('#'+this.id+'w')
+      const id = this.id;
+      const dropdown = document.querySelector('#' + id);
+      const dropdownWindow = document.querySelector('#' + id + 'w');
 
           dropdown?.addEventListener('click', () => {
-            dropdownWindow.classList.toggle('hidden');
+            dropdownWindow?.classList.toggle('hidden');
           });
 
 

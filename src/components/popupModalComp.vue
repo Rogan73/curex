@@ -21,7 +21,7 @@
          <div 
          v-for="item,i in listOtherAllFilter"
          :key="i"
-         class="item"
+         class="itemSb"
          @click="AddlistOther(item)"
          >
            <div class="dflex3" v-if="item">
@@ -144,7 +144,8 @@ export default {
     flex-direction: column;
     align-items: center;
 }
-.item{
+.itemSb{
+    cursor: pointer;
     width: -webkit-fill-available;
     max-width: 50%;
     padding: 10px 20px;

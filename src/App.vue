@@ -2,7 +2,6 @@
     <div class="app_main"
     :class=" {vis: vis}"
     >
-    
     <popupModalComp/>
     <headerComp/>
     <div class="main">
@@ -38,7 +37,6 @@ export default defineComponent({
   }),
   created() {
     store.dispatch('fetchCurrencies');
-    
   },
   mounted(){
     document.title = 'Конвертер валют';

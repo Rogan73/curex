@@ -15,7 +15,7 @@
       class="inp summa" 
       type="number" 
       :value="amountFrom" 
-      @input="setAmountFrom($event.target.value)"
+      @input="setAmountFrom(($event.target as HTMLInputElement).value)"
       title="Кількість, яку хочемо поміняти"
       min="1"
       >
@@ -55,7 +55,7 @@
 
 </template>
 
-<script>
+<script lang="ts">
 import dropdown from "../dropdownComp.vue"
 import swapIcon from "../icons/swapIcon.vue"
 import { mapGetters,mapMutations } from 'vuex'
@@ -105,16 +105,12 @@ export default {
    cursor: pointer;
    transition: all 0.3s ease;
    &:hover{
-     /*background-color: var(--colBut);*/
      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.285);
    }
  }
 
  .sw{
   fill: var(--colButCh);
-   /*&:hover{
-    fill: var(--colBut);
-   }*/
  }
 
  .tcurs{

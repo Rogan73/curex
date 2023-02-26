@@ -17,7 +17,7 @@
      
        <div class="listOther">
           <div 
-          class="item" 
+          class="itemLS" 
           v-for="item,i in listOther"
           :key="i"
           >
@@ -70,7 +70,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.item{
+.itemLS{
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
